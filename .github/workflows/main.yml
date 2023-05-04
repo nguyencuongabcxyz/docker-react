@@ -15,4 +15,4 @@ jobs:
     - name: Build test docker image
       run: docker build . --file Dockerfile.dev --tag nguyenc123/docker-react
     - name: Run unit tests
-      run: docker run nguyenc123/docker-react npm run test
+      run: docker run -e CI=true nguyenc123/docker-react npm run test
